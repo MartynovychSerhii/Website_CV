@@ -1,0 +1,190 @@
+:root {
+      --bg: #f4f4f4;
+      --white: #ffffff;
+      --text: #333;
+      --muted: #777;
+      --line: #d0d0d0;
+      --accent: #222;
+    }
+
+    body.dark {
+      --bg: #1e1e1e;
+      --white: #2b2b2b;
+      --text: #f1f1f1;
+      --muted: #aaa;
+      --line: #444;
+      --accent: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      padding: 20px;
+    }
+
+    .resume {
+      max-width: 1100px;
+      margin: auto;
+      background: var(--white);
+      border-radius: 16px;
+
+    }
+
+    /* HEADER */
+    .header {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      background: #e5e5e5;
+      padding: 30px;
+      align-items: center;
+      overflow: visible;
+    }
+
+    .header h1 {
+      letter-spacing: 3px;
+      font-size: 34px;
+    }
+
+    .header h2 {
+      margin-top: 8px;
+      font-size: 14px;
+      letter-spacing: 4px;
+      color: var(--muted);
+    }
+
+    .photo img {
+      position: absolute;
+      top: -10px;
+      right: 5%;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 20px;
+      border: 8px solid #e5e5e5;
+      object-position: 50% 0%;
+      z-index: 999;
+    }
+
+    /* CONTENT */
+    .content {
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      position: relative;
+    }
+
+    .content::before {
+      content: "";
+      position: absolute;
+      left: 380px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: var(--line);
+    }
+
+    .left, .right {
+      padding: 30px;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+    .block {
+    border: 1px solid #e5e5e5;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 5px;
+    }
+    h3 {
+      margin: 10px 0 15px;
+      padding-left: 10px;
+      letter-spacing: 2px;
+      font-size: 18px;
+      color: var(--accent);
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+      padding-left: 10px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .contact p, .contact a {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 8px;
+      display: block;
+      text-decoration: none;
+    }
+
+    .summary {
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+
+    .job {
+      margin-bottom: 30px;
+      padding-left: 10px;
+    }
+
+    .job-title {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .job-company {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .job ul li {
+      list-style: disc;
+      margin-left: 20px;
+    }
+
+    .links a {
+      display: block;
+      margin-bottom: 10px;
+      padding-left: 10px;
+      color: var(--accent);
+      text-decoration: underline;
+      font-size: 14px;
+    }
+
+    /* TOGGLE */
+    .toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--accent);
+      color: var(--bg);
+      border: none;
+      padding: 10px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .content {
+        grid-template-columns: 1fr;
+      }
+
+      .content::before {
+        display: none;
+      }
+    }
+  </style>
