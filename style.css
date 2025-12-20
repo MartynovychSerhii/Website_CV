@@ -5,6 +5,7 @@
       --muted: #777;
       --line: #d0d0d0;
       --accent: #222;
+      --head: #e5e5e5;
     }
 
     body.dark {
@@ -42,7 +43,7 @@
       position: relative;
       display: grid;
       grid-template-columns: 1fr auto;
-      background: #e5e5e5;
+      background: var(--head);
       padding: 30px;
       align-items: center;
       overflow: visible;
@@ -68,7 +69,7 @@
       height: 200px;
       object-fit: cover;
       border-radius: 20px;
-      border: 8px solid #e5e5e5;
+      border: 8px solid var(--head);
       object-position: 50% 0%;
       z-index: 999;
     }
@@ -96,7 +97,7 @@
       padding-left: 10px;
     }
     .block {
-    border: 1px solid #e5e5e5;
+    border: 1px solid var(--head);
     border-radius: 20px;
     padding: 10px;
     margin: 5px;
@@ -118,6 +119,7 @@
       padding-left: 10px;
       color: var(--muted);
       font-size: 14px;
+      line-height: 1.5;
     }
 
     .contact p, .contact a {
@@ -159,10 +161,53 @@
       display: block;
       margin-bottom: 10px;
       padding-left: 10px;
-      color: var(--accent);
-      text-decoration: underline;
+      color: var(--muted);
+      text-decoration: none;
       font-size: 14px;
     }
+    a:hover {
+        color: #38b2ac;
+    }
+    .contact-item {
+      line-height: 1;
+      display: flex;       /* ставимо елементи в ряд */
+       /* вирівнюємо по центру по вертикалі */
+      gap: 8px;            /* відстань між текстом і кнопкою */
+      list-style: none;    /* прибираємо крапку списку */
+      padding-bottom: 0;
+    }
+    .contact-item a {
+    display: inline-block;
+    line-height: 1;
+    text-decoration: none;
+    }
+
+    .copy-btn {
+      padding: 0;
+      margin: 0;
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      display: flex;
+
+
+    }
+
+    .copy-btn i {
+      display: inline-flex;
+      width: 15px;
+      height: 15px;
+      opacity: 0.5;
+      transition: opacity 0.2s;
+      line-height: 1.2;
+      align-items: bottom;
+    }
+
+    .copy-btn:hover i {
+      opacity: 1;
+    }
+
 
     /* TOGGLE */
     .toggle {

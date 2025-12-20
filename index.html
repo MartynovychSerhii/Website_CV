@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Martynovych Serhii – Data Analyst</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 </head>
 <body>
@@ -29,11 +30,28 @@
     <div class="left">
       <div class="block">
         <ul class="contact">
-          <li><a href="tel:+380639386907">+38(063)-938-69-07</a></li>
-          <li><a href="mailto:martynovych.serhii@gmail.com">martynovych.serhii@gmail.com</a></li>
           <li>Kyiv, Ukraine</li>
-          <li><a href="https://www.linkedin.com/in/serhii-martynovych/" target="_blank">LinkedIn</a></li>
-          <li><a href="https://t.me/Martynovych_Serhii" target="_blank">Telegram</a></li>
+          <li class="contact-item"><a href="tel:+380639386907" id="phone" >+38(063)-938-69-07</a>
+            <button class="copy-btn" onclick="copyToClipboard('phone', this)">
+              <i class="fa-regular fa-copy"></i>
+            </button>
+          </li>
+          <li class="contact-item"><a href="mailto:martynovych.serhii@gmail.com" id="email">martynovych.serhii@gmail.com </a>
+            <button class="copy-btn" onclick="copyToClipboard('email', this)">
+              <i class="fa-regular fa-copy"></i>
+            </button>
+          </li>
+
+          <li class="contact-item"><a href="https://www.linkedin.com/in/serhii-martynovych/" id="linkedin" target="_blank">LinkedIn</a>
+            <button class="copy-btn" onclick="copyToClipboard('linkedin', this)">
+              <i class="fa-regular fa-copy"></i>
+            </button>
+          </li>
+          <li class="contact-item"><a href="https://t.me/Martynovych_Serhii" target="_blank" id="telegram">Telegram</a>
+            <button class="copy-btn" onclick="copyToClipboard('telegram', this)">
+              <i class="fa-regular fa-copy"></i>
+            </button>
+          </li>
         </ul>
       </div>
       <div class="block">
@@ -133,6 +151,6 @@
     document.body.classList.toggle("dark");
   }
 </script>
-
+<script src="script.js"></script>
 </body>
 </html>
