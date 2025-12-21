@@ -1,4 +1,4 @@
-
+// Функція для обробки кліка на копіюванні
 function copyToClipboard(elementId, btnElement) {
     const element = document.getElementById(elementId);
     if (!element) return;
@@ -15,11 +15,11 @@ function copyToClipboard(elementId, btnElement) {
         const originalClass = icon.className;
 
         icon.className = 'fa-solid fa-check';
-        btnElement.style.color = '#2ecc71';
+        btnElement.classList.add('success');
 
         setTimeout(() => {
             icon.className = originalClass;
-            btnElement.style.color = '';
+            btnElement.classList.remove('success');
         }, 2000);
     });
 }

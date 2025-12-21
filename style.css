@@ -6,6 +6,9 @@
       --line: #d0d0d0;
       --accent: #222;
       --head: #e5e5e5;
+      --black: black;
+      --a_hover:#38b2ac;
+      --checkmarks: #2ecc71;
     }
 
     body.dark {
@@ -15,6 +18,8 @@
       --muted: #aaa;
       --line: #444;
       --accent: #fff;
+      --black: #777;
+      --checkmarks: #2ecc71;
     }
 
     * {
@@ -41,7 +46,8 @@
     /* HEADER */
     .header {
       position: relative;
-      display: grid;
+      display: flex;
+      justify-content: space-between;
       grid-template-columns: 1fr auto;
       background: var(--head);
       padding: 30px;
@@ -52,6 +58,7 @@
     .header h1 {
       letter-spacing: 3px;
       font-size: 34px;
+      color: var(--black);
     }
 
     .header h2 {
@@ -69,7 +76,7 @@
       height: 200px;
       object-fit: cover;
       border-radius: 20px;
-      border: 8px solid var(--head);
+      border: 8px solid var(--a_hover);
       object-position: 50% 0%;
       z-index: 999;
     }
@@ -166,14 +173,13 @@
       font-size: 14px;
     }
     a:hover {
-        color: #38b2ac;
+        color: var(--a_hover);
     }
     .contact-item {
       line-height: 1;
-      display: flex;       /* ставимо елементи в ряд */
-       /* вирівнюємо по центру по вертикалі */
-      gap: 8px;            /* відстань між текстом і кнопкою */
-      list-style: none;    /* прибираємо крапку списку */
+      display: flex;
+      gap: 8px;
+      list-style: none;
       padding-bottom: 0;
     }
     .contact-item a {
@@ -202,12 +208,19 @@
       transition: opacity 0.2s;
       line-height: 1.2;
       align-items: bottom;
+      color: var(--text);
     }
 
     .copy-btn:hover i {
       opacity: 1;
     }
+    .copy-btn.success {
+        color: var(--checkmarks) !important;
+    }
 
+    .copy-btn.success i {
+        color: var(--checkmarks) !important;
+    }
 
     /* TOGGLE */
     .toggle {
@@ -232,4 +245,33 @@
         display: none;
       }
     }
-  </style>
+    @media (max-width: 780px) {
+    .photo img {
+        position: static;
+        display: block;
+        margin: 0 auto 20px;
+        width: 150px;
+        height: 150px;
+      }
+    }
+    @media (max-width: 570px) {
+    .photo img {
+        position: static;
+        display: block;
+        margin: 0 auto 0px;
+        width: 150px;
+        height: 150px;
+      }
+    .header {
+        flex-direction: column;
+       }
+    .name_block {
+        margin-bottom: 15px;
+        }
+    .name_block h1,
+    .name_block h2{
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        }
+    }
