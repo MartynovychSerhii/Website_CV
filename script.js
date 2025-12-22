@@ -1,3 +1,18 @@
+// 1. Функція перемикання теми
+function toggleTheme() {
+    const isDark = document.body.classList.toggle("dark");
+    // Зберігаємо вибір користувача: 'enabled' або 'disabled'
+    localStorage.setItem("dark-theme", isDark ? "enabled" : "disabled");
+}
+
+// 2. Функція, яка спрацьовує одразу при завантаженні будь-якої сторінки
+(function applyTheme() {
+    const savedTheme = localStorage.getItem("dark-theme");
+    if (savedTheme === "enabled") {
+        document.body.classList.add("dark");
+    }
+})();
+
 // Функція для обробки кліка на копіюванні
 function copyToClipboard(elementId, btnElement) {
     const element = document.getElementById(elementId);
