@@ -10,56 +10,56 @@
 
 
 </head>
-  <body>
-
+<body>
   <div class="resume">
 
-    <!-- HEADER -->
-    <div class="header">
-      <div class='name_block'>
-        <h1>MARTYNOVYCH SERHII</h1>
-        <h2>DATA ANALYST</h2>
+      <!-- HEADER -->
+      <div class="header">
+        <div class='name_block'>
+          <h1>MARTYNOVYCH SERHII</h1>
+          <h2>DATA ANALYST</h2>
+        </div>
+        <div class="photo">
+          <img src="img/IMG_me.jpg" alt="#">
+        </div>
       </div>
-      <div class="photo">
-        <img src="img/IMG_me.jpg" alt="#">
+      <div class="bookmark">
+        <h2><a href="index.html">Professional Experience</a> </h2>
+        <h2 class="active"><a href="Personal_Projects.html">Personal Projects</a> </h2>
       </div>
-    </div>
-    <div class="bookmark">
-      <h2><a href="index.html">Professional Experience</a> </h2>
-      <h2 class="active"><a href="Personal_Projects.html">Personal Projects</a> </h2>
-    </div>
-    <!-- CONTENT -->
-    <div>
-        <div class="projects-grid">
-          <div class="project-card">
-            <img src="img/datacamp_img.webp" class="card-bg" alt="DataCamp">
-            <div class="project-overlay">
-              <a href="https://www.datacamp.com/portfolio/martynovychserhii" target="_blank">DataCamp</a>
+      <!-- CONTENT -->
+      <div>
+          <div class="projects-grid">
+            <div class="project-card">
+              <img src="img/datacamp_img.webp" class="card-bg" alt="DataCamp">
+              <div class="project-overlay">
+                <a href="https://www.datacamp.com/portfolio/martynovychserhii" target="_blank">DataCamp</a>
+              </div>
             </div>
-          </div>
 
-          <div class="project-card">
-            <img src="img/tableau_public.png" class="card-bg" alt="Tableau">
-            <div class="project-overlay">
-              <a href="https://public.tableau.com/app/profile/.48972542/vizzes" target="_blank">Tableau Public</a>
+            <div class="project-card">
+              <img src="img/tableau_public.png" class="card-bg" alt="Tableau">
+              <div class="project-overlay">
+                <a href="https://public.tableau.com/app/profile/.48972542/vizzes" target="_blank">Tableau Public</a>
+              </div>
             </div>
-          </div>
 
-          <div class="project-card">
-            <img src="img/github.jpeg" class="card-bg" alt="GitHub">
-            <div class="project-overlay">
-              <a href="https://github.com/MartynovychSerhii" target="_blank">GitHub</a>
+            <div class="project-card">
+              <img src="img/github.jpeg" class="card-bg" alt="GitHub">
+              <div class="project-overlay">
+                <a href="https://github.com/MartynovychSerhii" target="_blank">GitHub</a>
+              </div>
             </div>
-          </div>
+    </div>
+
+      </div>
+      <button class="toggle" onclick="toggleTheme()">🌗 Theme</button>
+    <script>
+      function toggleTheme() {
+        document.body.classList.toggle("dark");
+      }
+    </script>
+    <script src="script.js"></script>
   </div>
-
-    </div>
-    <button class="toggle" onclick="toggleTheme()">🌗 Theme</button>
-  <script>
-    function toggleTheme() {
-      document.body.classList.toggle("dark");
-    }
-  </script>
-  <script src="script.js"></script>
-  </body>
+</body>
 </html>
