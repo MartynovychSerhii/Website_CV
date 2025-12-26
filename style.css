@@ -167,10 +167,12 @@
       font-size: 14px;
       color: var(--muted);
       margin-bottom: 8px;
-      display: block;
+      display: flex;
       text-decoration: none;
     }
+    .contact {
 
+    }
     .summary {
       font-size: 15px;
       line-height: 1.6;
@@ -355,16 +357,36 @@
       .right {
         padding: 0px 10px 0 10px !important;
       }
-      }
       .content::before {
         display: none;
       }
-    }
+      .contact {
+        display: grid;
+        /* створюємо дві колонки */
+        grid-template-columns: 320px 1fr;
+        gap: 10px;
+      }
+
+
+
+
+      }
+
+
     @media (max-width: 815px) {
+    .header {
+        padding-bottom: 0px;
+    }
+    .name_block {
+        margin-bottom: 15px;
+    }
+    .header {
+        flex-direction: column;
+       }
     .photo img {
-        position: static;
+        position: relative;
         display: block;
-        margin: 0 auto 20px;
+        margin: 10px auto 10px;
         width: 150px;
         height: 150px;
       }
@@ -381,6 +403,10 @@
             gap: 15px;
       }
     }
+
+
+
+
     @media (max-width: 768px) {
         .projects-grid {
             grid-template-columns: 1fr;
@@ -395,17 +421,20 @@
             gap: 15px;
       }
     }
+
+
+
     @media (max-width: 590px) {
         .bookmark {
-        display: flex;
-        padding: 10px 0 0 0;
-        gap: 0;
-        text-align:center;
-        word-spacing: 100vw;
+            display: flex;
+            padding: 10px 0 0 0;
+            gap: 0;
+            text-align:center;
+            word-spacing: 100vw;
 
     }
         .bookmark h2 {
-        justify-content: center;
+            justify-content: center;
         }
 
     }
@@ -416,7 +445,7 @@
     .photo img {
         position: static;
         display: block;
-        margin: 0 auto 0px;
+        margin: 0 auto 15px;
         width: 150px;
         height: 150px;
       }
@@ -438,6 +467,10 @@
         gap: 0;
         text-align:center;
     }
+    .contact {
+        display: block;
+    }
+
 
 
     .bookmark h2 {
