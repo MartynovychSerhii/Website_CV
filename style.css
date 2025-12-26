@@ -362,13 +362,8 @@
       }
       .contact {
         display: grid;
-        /* створюємо дві колонки */
         grid-template-columns: 320px 1fr;
-        gap: 10px;
       }
-
-
-
 
       }
 
