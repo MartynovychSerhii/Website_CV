@@ -426,11 +426,13 @@
             gap: 0;
             text-align:center;
             word-spacing: 100vw;
-
-    }
+        }
         .bookmark h2 {
             justify-content: center;
         }
+     .contact {
+        display: block;
+    }
 
     }
 
@@ -462,9 +464,7 @@
         gap: 0;
         text-align:center;
     }
-    .contact {
-        display: block;
-    }
+
 
 
 
