@@ -1,15 +1,15 @@
-// 1. Функція перемикання теми
+// 1. Функція перемикання (для кнопки)
 function toggleTheme() {
-    const isDark = document.body.classList.toggle("dark");
-    // Зберігаємо вибір користувача: 'enabled' або 'disabled'
+    // Змінюємо клас на тегу html (documentElement)
+    const isDark = document.documentElement.classList.toggle("dark");
     localStorage.setItem("dark-theme", isDark ? "enabled" : "disabled");
 }
 
-// 2. Функція, яка спрацьовує одразу при завантаженні будь-якої сторінки
+// 2. Функція застосування (спрацьовує миттєво)
 (function applyTheme() {
     const savedTheme = localStorage.getItem("dark-theme");
     if (savedTheme === "enabled") {
-        document.body.classList.add("dark");
+        document.documentElement.classList.add("dark");
     }
 })();
 
