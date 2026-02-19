@@ -91,14 +91,14 @@
     /* CONTENT */
     .content {
       display: grid;
-      grid-template-columns: 380px 1fr;
+      grid-template-columns: 410px 1fr;
       position: relative;
     }
 
     .content::before {
       content: "";
       position: absolute;
-      left: 380px;
+      left: 410px;
       top: 0;
       bottom: 0;
       width: 1px;
