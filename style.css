@@ -359,7 +359,7 @@
     }
 
     .project-card:hover .card-bg {
-      opacity: 0.4;
+      opacity: 0.6;
       transform: scale(1.25);
     }
 
