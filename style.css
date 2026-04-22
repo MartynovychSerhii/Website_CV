@@ -337,10 +337,10 @@
     .project-card {
       position: relative;
       height: 160px;
-      border-radius: 15px;
+      border-radius: 0 ;
       overflow: hidden;
       background: var(--white);
-      border: 1px solid var(--line);
+      /*border: 1px solid var(--line); */
       transition: transform 0.3s, box-shadow 0.3s;
     }
 
@@ -576,3 +576,28 @@
         flex: 1;
       }
     }
+
+.project-item {
+  display: flex;
+  flex-direction: column;
+  background: var(--white); /* Колір як на головній */
+  border: 1px solid var(--line); /* Тонкий сірий бордер */
+  border-radius: 16px; /* Закруглення як у всього майна */
+  overflow: hidden;
+  transition: transform 0.2s ease;
+
+}
+.project-info {
+  padding: 15px;
+  background: var(--white);
+  border-top: 1px solid var(--line); /* Лінія між картинкою та текстом */
+}
+
+.project-info p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--muted); /* Колір тексту як в індексі */
+  text-align: left;
+}
+
